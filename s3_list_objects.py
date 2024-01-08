@@ -62,11 +62,12 @@ def list_objects_keys(client, bucket, prefix=''):
     return keys
     
 
+if __name__ == '__main__': # dont run this if was imported to other code
 # call the function 
-s3 = boto3.client('s3')
-
-response = filter_objects_extension(s3, 'costa-boto3-01032024', '.txt')
-print(response)
-
-response = list_objects_keys(s3, 'costa-boto3-01032024', 'folder/')
-print(response)
+    s3 = boto3.client('s3')
+    
+    response = filter_objects_extension(s3, 'costa-boto3-01032024', '.txt')
+    print(response)
+    
+    response = list_objects_keys(s3, 'costa-boto3-01032024', 'folder/')
+    print(response)

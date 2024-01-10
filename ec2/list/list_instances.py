@@ -36,3 +36,4 @@ for reservation in response['Reservations']:
             print(instance['IamInstanceProfile']['Arn'], instance['IamInstanceProfile']['Id'])
 
 # print(response)
+
